@@ -6,17 +6,17 @@ import java.util.function.Function;
 
 
 
-public class FuncionResta implements Function<Scanner, Void>{
+public class FuncionResta implements Function<Scanner, Void>{ 
 
     @Override
-    public Void apply(Scanner sc) {
+    public Void apply(Scanner sc) {  // introducir datos a traves del teclado
         
         System.out.println("\nOperación seleccionada resta:\n");
         System.out.println("A - B\n");
         
-        System.out.println("Introduzca A:");
+        System.out.println("Introduzca A:"); // Introduccion de datos 
         String aStr = sc.next();
-        BigDecimal aBD = new BigDecimal(aStr);
+        BigDecimal aBD = new BigDecimal(aStr); // Crear un objeto nuevo pasandole el String
 
         System.out.println("Introduzca B:");
         String bStr = sc.next();

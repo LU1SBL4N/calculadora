@@ -3,7 +3,7 @@ package com.josemanuel;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
-
+// importancion de todas las funciones y menus creado
 import com.josemanuel.funcion.FuncionArea;
 import com.josemanuel.funcion.FuncionExitMenu;
 import com.josemanuel.funcion.FuncionResta;
@@ -25,23 +25,23 @@ public class SuperCalculadora
 
     public static void main( String[] args ) 
     {
-        SuperCalculadora superCalculadora = new SuperCalculadora();
+        SuperCalculadora superCalculadora = new SuperCalculadora(); // creacion de la suèrcalculado
         
         try {
-            superCalculadora.getMenuPrincipal().bucle();
+            superCalculadora.getMenuPrincipal().bucle();  // inicio 
         } catch(ExitMenuException eme) {
-            System.out.println("FIN SUPERCALCULADORA");
+            System.out.println("FIN SUPERCALCULADORA");  // final de la supercalculadora
             superCalculadora.getSc().close();
         }
 
     }
  
-    private void inicializaMenus() {
+    private void inicializaMenus() {   // Inicio de menu
         
         String introOpc = "Introduzca opción:";
         ItemMenu itemMenuExit = new ItemMenu("Salir", new FuncionExitMenu());
         
-        Map<String, ItemMenu> mapItemMenuAritmetica = new HashMap<String, ItemMenu>();
+        Map<String, ItemMenu> mapItemMenuAritmetica = new HashMap<String, ItemMenu>();  // Array Mapa
         mapItemMenuAritmetica.put("1", new ItemMenu("Operación suma", new FuncionSuma()));
         mapItemMenuAritmetica.put("2", new ItemMenu("Operación resta", new FuncionResta()));
         mapItemMenuAritmetica.put("X", itemMenuExit);

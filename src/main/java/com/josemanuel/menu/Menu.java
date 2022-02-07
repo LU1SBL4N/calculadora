@@ -36,12 +36,12 @@ public class Menu {
     public void bucle() throws ExitMenuException {
 
         
-        do{
+        do{ // while para acceder a los menus 
 
             this.renderiza();            
-            String next = sc.next();
+            String next = sc.next();  // llamada por teclado 
             ItemMenu itemMenuSelect = this.mapItemMenu.get(next);
-            if (itemMenuSelect != null) {
+            if (itemMenuSelect != null) {   // 
                 Menu subMenu;
                 if ((subMenu = itemMenuSelect.getSubMenu())!= null) {                
                     try {
@@ -59,7 +59,7 @@ public class Menu {
                 System.out.println("Opción no válida, intente de nuevo");
             }
             
-        } while(true);
+        } while(true); // se ejecutará el bucle hasta que una opcion sea correcta
 
     }
 
